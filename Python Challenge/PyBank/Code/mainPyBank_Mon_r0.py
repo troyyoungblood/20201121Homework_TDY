@@ -3,8 +3,8 @@ import os
 import csv
 
 #Create path to source file
-#bankdatapath = os.path.join("..", "Resources", "budget_data.csv")
-bankdatapath = "C:/Users/troyy/Desktop/Class_Material/TY_Homework_Folder/20201121_Homework_3/Python_Challenge/PyBank/Resources/budget_data.csv"
+bankdatapath = os.path.join("..", "Resources", "budget_data.csv")
+#bankdatapath = "C:/Users/troyy/Desktop/Class_Material/TY_Homework_Folder/20201121_Homework_3/Python_Challenge/PyBank/Resources/budget_data.csv"
 
 #Create variable
 nettotal_pl = []         #Net total Profit(P)/Loss(L) over entire period 
@@ -48,7 +48,7 @@ for a in range(len(nettotal_pl)):
 avgcumdiff = sum(cumdiff) / len(cumdiff)
 #Format avgcumdiff to 2 decimals
 formatted_avgcumdiff = "{:.2f}".format(avgcumdiff)
-#print(formatted_avgcumdiff)
+
 
 #Create dictionary of allmonths and cumdiff - this will be used to match max values with month
 #Make lists same length.  cumdiff is shorter and needs 0 at beginning
@@ -77,8 +77,8 @@ print(f'Greatest Increase in Profits:  {gim_key[0]} $ {greatinc_p}')
 print(f'Greatest Decrease in Profits:  {gdm_key[0]} $ {greatdec_l}')
 
 #Create output path to final analysis file - final_analysis_tdy.txt
-#output_path = os.path.join("..", "Analysis", "final_analysis_tdy.txt")
-output_path = "C:/Users/troyy/Desktop/Class_Material/TY_Homework_Folder/20201121_Homework_3/Python_Challenge/PyBank/Analysis/final_analysis_tdy.txt"
+output_path = os.path.join("..", "Analysis", "final_analysis_tdy.txt")
+#output_path = "C:/Users/troyy/Desktop/Class_Material/TY_Homework_Folder/20201121_Homework_3/Python_Challenge/PyBank/Analysis/final_analysis_tdy.txt"
 with open(output_path, "w") as text_file:
     print(f'Total Months: {totalmonths}', file = text_file)
     print("Total: $",sum(nettotal_pl), file = text_file)
