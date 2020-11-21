@@ -69,7 +69,8 @@ greatdec_l = min(monthdiff.values())
 #Octaining max (min) decrease key from dictionary monthdiff
 gdm_key = [keys for keys, values in monthdiff.items() if values == min(monthdiff.values())]
 
-
+print(f'Financial Analysis')
+print('---------------------------------------------------')
 print(f'Total Months: {totalmonths}')
 print("Total: $",sum(nettotal_pl))
 print(f'Average Change: $ {formatted_avgcumdiff}')
@@ -80,6 +81,8 @@ print(f'Greatest Decrease in Profits:  {gdm_key[0]} $ {greatdec_l}')
 output_path = os.path.join("..", "Analysis", "final_analysis_tdy.txt")
 #output_path = "C:/Users/troyy/Desktop/Class_Material/TY_Homework_Folder/20201121_Homework_3/Python_Challenge/PyBank/Analysis/final_analysis_tdy.txt"
 with open(output_path, "w") as text_file:
+    print(f'Financial Analysis', file = text_file)
+    print('---------------------------------------------------', file = text_file)
     print(f'Total Months: {totalmonths}', file = text_file)
     print("Total: $",sum(nettotal_pl), file = text_file)
     print(f'Average Change: $ {formatted_avgcumdiff}', file = text_file)
