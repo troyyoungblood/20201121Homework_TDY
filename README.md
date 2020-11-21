@@ -43,7 +43,7 @@ The final script prints the analysis to the terminal and exports a text file wit
 
 The second task was to help a small, rural town modernize its vote counting process.
 
-The analysis is to be conducted on a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. The task is to create a Python script that analyzes the votes and calculates each of the following:
+The analysis is to be conducted on a set of poll data called [election_data.csv](PyPoll/Resources/election_data.csv). The dataset was so large that it would not upload into GitHub.  The dataset is composed of three columns: `Voter ID`, `County`, and `Candidate`. The task is to create a Python script that analyzes the votes and calculates each of the following:
 
 	The total number of votes cast
 
